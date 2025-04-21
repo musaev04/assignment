@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Prog Evolutions</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen">
+        <h1>WEB PROG EVOLUTIONS</h1>
+        <div class="start-form">
+            <div class="form-group">
+                <label for="player-name">NAME:</label>
+                <input type="text" id="player-name" placeholder="PLAYER">
+            </div>
+            <div class="form-group">
+                <label for="difficulty">DIFFICULTY:</label>
+                <select id="difficulty">
+                    <option value="easy">EASY</option>
+                    <option value="medium">MEDIUM</option>
+                    <option value="hard">HARD</option>
+                </select>
+            </div>
+            <button id="play-button">PLAY</button>
+        </div>
+    </div>
+
+    <!-- Game Screen (initially hidden) -->
+    <div id="game-screen" class="screen hidden">
+        <div class="game-header">
+            <h1>WEB PROG EVOLUTION</h1>
+            <div class="game-info">
+                <div class="info-item">
+                    <span>NAME:</span>
+                    <span id="display-name"></span>
+                </div>
+                <div class="info-item">
+                    <span>DIFFICULTY:</span>
+                    <span id="display-difficulty"></span>
+                </div>
+                <div class="info-item">
+                    <span>TIME:</span>
+                    <span id="display-time">00:00</span>
+                </div>
+                <div class="info-item">
+                    <span>SCORE:</span>
+                    <span id="display-score">000000</span>
+                </div>
+            </div>
+            <button id="draw-button">DRAW</button>
+        </div>
+        
+        <div class="game-content">
+            <div class="scoring-table">
+                <!-- This will be filled dynamically -->
+            </div>
+            
+            <div class="game-board-container">
+                <div id="game-board"></div>
+            </div>
+            
+            <div class="leaderboard">
+                <h2>LEADERBOARD</h2>
+                <div id="leaderboard-content">
+                    <!-- This will be filled dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Screen (initially hidden) -->
+    <div id="game-over-screen" class="screen hidden">
+        <h2>TIME IS OVER!</h2>
+        <div class="game-over-buttons">
+            <button id="back-to-home">BACK TO HOME</button>
+            <button id="restart-game">RESTART GAME</button>
+        </div>
+    </div>
+
+    <!-- Tooltip Template (initially hidden) -->
+    <div id="tooltip" class="hidden">
+        <h3 id="tooltip-name"></h3>
+        <p id="tooltip-description"></p>
+        <img id="tooltip-chain" src="" alt="Evolution Chain">
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/evolutions.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
